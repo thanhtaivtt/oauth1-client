@@ -11,15 +11,15 @@ class TwitterServerTest extends TestCase
     public function sampleTemporaryCredentialUrls(): Generator
     {
         yield 'No application scope' => [
-            null, 'https://api.twitter.com/oauth/request_token',
+            null, 'https://api.x.com/oauth/request_token',
         ];
 
         yield "Read" => [
-            'read', 'https://api.twitter.com/oauth/request_token?x_auth_access_type=read',
+            'read', 'https://api.x.com/oauth/request_token?x_auth_access_type=read',
         ];
 
         yield "Write" => [
-            'write', 'https://api.twitter.com/oauth/request_token?x_auth_access_type=write',
+            'write', 'https://api.x.com/oauth/request_token?x_auth_access_type=write',
         ];
     }
 
